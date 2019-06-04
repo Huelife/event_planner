@@ -4,6 +4,8 @@ import datetime
 
 now = datetime.datetime.now()
 msg = ""
+day_list = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday",
+            "Saturday"]
 
 #reading event.txt file
 with open('event.txt', 'r') as fin:
