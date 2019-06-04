@@ -1,11 +1,16 @@
 #event_planner.py: Simple event planner that emails you events you schedule
 
 import datetime
+import re
 
 now = datetime.datetime.now()
-msg = ""
 day_list = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday",
             "Saturday"]
+
+#date check doesnt check if calender date exists
+date_check = r"[1-12]/[1-31]/[19-99]"
+
+msg = ""
 
 #reading event.txt file
 with open('event.txt', 'r') as fin:
