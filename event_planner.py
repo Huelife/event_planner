@@ -26,7 +26,17 @@ with open('msg.txt', 'w') as fout:
     
 event_date = input("What date is your event? ex. '04/06/19' ")
 
-event_day = input("What day is your event? ex. 'Tuesday' ")
+while True:
+  try:
+    event_day = input("What day is your event? ex. 'Tuesday' ")
+  except ValueError:
+    continue
+  else:
+    if event_day in day_list:
+      break
+    else:
+      print("Sorry, that day doesn't exist.")
+      continue
 
 event_hr = input("What time is your event? ex. '09:15AM' ")
 
