@@ -28,8 +28,18 @@ def event_check():
 with open('msg.txt', 'w') as fout:
   for i in msg:
     fout.write(i)
-    
-event_date = input("What date is your event? ex. '04/06/19' ")
+
+while True:
+  try:
+    event_date = input("What date is your event? ex. '04/06/19' ")
+  except ValueError:
+    continue
+  else:
+    if re.search(date_check,event_date):
+      break
+    else:
+      print("Invalid date!")
+      continue
 
 while True:
   try:
