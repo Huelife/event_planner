@@ -29,7 +29,7 @@ with open('event.txt', 'r') as fin:
 def event_check():    
   print(msg)
   print("")
-  print(time_date,time_day,time_hr)
+  print(event_date,event_day,event_hr)
 
 #writing msg to file, with date info later, to be emailed
 with open('msg.txt', 'w') as fout:
