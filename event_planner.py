@@ -45,6 +45,7 @@ with open('msg.txt', 'w') as fout:
   for i in msg:
     fout.write(i)
 
+#creating and checking event_date validity
 while True:
   try:
     event_date = input("What date is your event? ex. '04/06/19' ")
@@ -62,6 +63,7 @@ while True:
       print("Invalid date!")
       continue
 
+#creating and checking event_day validity
 while True:
   try:
     event_day = input("What day is your event? ex. 'Tuesday' ")
@@ -74,6 +76,7 @@ while True:
       print("Sorry, that day doesn't exist.")
       continue
 
+#creating and checking event_hr validity
 while True:
   try:
     event_hr = input("What time is your event? ex. '09:15AM' ")
@@ -88,6 +91,7 @@ while True:
             
 event_check()
 
+#checking if event_check function is true
 while True:
   try:
     correct = input("Is the above correct? ")
