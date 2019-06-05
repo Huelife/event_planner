@@ -101,7 +101,9 @@ while True:
     if correct == "Yes":
       print("")
     elif correct == "No":
-      print("")
+      print("Exiting module. You should start over!")
+      time.sleep(3)
+      sys.exit(0)
     else:
       print("Sorry, please choose 'Yes' or 'No'.")
 
