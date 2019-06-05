@@ -4,6 +4,7 @@ import datetime
 import re
 import sys
 import time
+import smtplib
 
 now = datetime.datetime.now()
 time_hr = now.strftime('%I:%M%p')
