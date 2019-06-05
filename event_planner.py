@@ -88,3 +88,6 @@ while True:
 event_check()
 
 correct = input("Is the above correct? ")
+
+time.sleep(1.5)
+sys.exit(0)
