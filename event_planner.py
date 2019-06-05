@@ -31,10 +31,11 @@ with open('event.txt', 'r') as fin:
     msg += i
 
 #function to check event, event day, event date, and event time
-def event_check():    
-  print(msg)
+def event_check():  
   print("")
+  print(msg)
   print(event_date,event_day,event_hr)
+  print("")
 
 #writing msg to file, with date info later, to be emailed
 with open('msg.txt', 'w') as fout:
