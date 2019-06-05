@@ -10,6 +10,10 @@ day_list = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday",
 #date check doesnt check if calender date exists
 date_check = r"[1-12]/[1-31]/[19-99]"
 
+#checking 12 hr clock
+hr_check1 = r"0[0-9]:[0-5][0-9][AM|PM]"
+hr_check2 = r"1[0-2]:[0-5][0-9][AM|PM]"
+
 msg = ""
 
 #reading event.txt file
@@ -53,8 +57,18 @@ while True:
       print("Sorry, that day doesn't exist.")
       continue
 
-event_hr = input("What time is your event? ex. '09:15AM' ")
-
+while True:
+  try:
+    event_hr = input("What time is your event? ex. '09:15AM' ")
+  except ValueError:
+    continue
+  else:
+    if re.search(hr_check1,event_hr) or re.search(hr_check2,event_hr):
+      break
+    else:
+      print("Sorry, that time doesn't exist.")
+      continue
+            
 event_check()
 
 correct = input("Is the above correct? ")
