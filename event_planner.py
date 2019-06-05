@@ -4,6 +4,9 @@ import datetime
 import re
 
 now = datetime.datetime.now()
+time_hr = now.strftime('%I:%M%p')
+time_day = now.strftime('%A')
+time_date = now.strftime('%D')
 day_list = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday",
             "Saturday"]
 
