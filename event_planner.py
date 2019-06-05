@@ -53,10 +53,10 @@ while True:
         re.search(date_check4,event_date) or
         re.search(date_check5,event_date) or
         re.search(date_check6,event_date)):
+      break
     else:
       print("Invalid date!")
       continue
-    break
 
 while True:
   try:
