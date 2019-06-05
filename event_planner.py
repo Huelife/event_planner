@@ -87,7 +87,18 @@ while True:
             
 event_check()
 
-correct = input("Is the above correct? ")
+while True:
+  try:
+    correct = input("Is the above correct? ")
+  except ValueError:
+    continue
+  else:
+    if correct == "Yes":
+      print("")
+    elif correct == "No":
+      print("")
+    else:
+      print("Sorry, please choose 'Yes' or 'No'.")
 
 time.sleep(1.5)
 sys.exit(0)
