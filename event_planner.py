@@ -11,10 +11,12 @@ day_list = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday",
             "Saturday"]
 
 #date check doesnt check if calender date exists
-date_check1 = r"0[1-9]/[0-2][0-9]/[1-9][0-9]"
-date_check2 = r"0[1-9]/3[0-1]/[1-9][0-9]"
-date_check3 = r"1[0-2]/[0-2][0-9]/[1-9][0-9]"
-date_check4 = r"1[0-2]/3[0-1]/[1-9][0-9]"
+date_check1 = r"0[1-9]/0[1-9]/[1-9][0-9]"
+date_check2 = r"0[1-9]/[1|2][0-9]/[1-9][0-9]"
+date_check3 = r"0[1-9]/3[0-1]/[1-9][0-9]"
+date_check4 = r"1[0-2]/0[1-9]/[1-9][0-9]"
+date_check5 = r"1[0-2]/[1|2][0-9]/[1-9][0-9]"
+date_check6 = r"1[0-2]/3[0-1]/[1-9][0-9]"
 
 #checking 12 hr clock
 hr_check1 = r"0[0-9]:[0-5][0-9][AM|PM]"
@@ -48,7 +50,9 @@ while True:
     if (re.search(date_check1,event_date) or
         re.search(date_check2,event_date) or
         re.search(date_check3,event_date) or
-        re.search(date_check4,event_date)):
+        re.search(date_check4,event_date) or
+        re.search(date_check5,event_date) or
+        re.search(date_check6,event_date)):
     else:
       print("Invalid date!")
       continue
