@@ -37,7 +37,6 @@ with open('event.txt', 'r') as fin:
 def event_check():  
   print("")
   print(msg)
-  print(event_date,event_day,event_hr)
   print("")
 
 #creating and checking event_date validity
@@ -53,6 +52,7 @@ while True:
         re.search(date_check4,event_date) or
         re.search(date_check5,event_date) or
         re.search(date_check6,event_date)):
+      msg += event_date
       break
     else:
       print("Sorry, that date isn't valid.")
@@ -66,6 +66,7 @@ while True:
     continue
   else:
     if event_day in day_list:
+      msg += event_day
       break
     else:
       print("Sorry, that day doesn't exist.")
@@ -79,6 +80,7 @@ while True:
     continue
   else:
     if re.search(hr_check1,event_hr) or re.search(hr_check2,event_hr):
+      msg += event_hr
       break
     else:
       print("Sorry, that time doesn't exist.")
