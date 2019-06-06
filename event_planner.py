@@ -52,7 +52,8 @@ while True:
         re.search(date_check4,event_date) or
         re.search(date_check5,event_date) or
         re.search(date_check6,event_date)):
-      msg += event_date
+      msg += "\n"
+      msg += event_date + " "
       break
     else:
       print("Sorry, that date isn't valid.")
@@ -66,7 +67,7 @@ while True:
     continue
   else:
     if event_day in day_list:
-      msg += event_day
+      msg += event_day + " "
       break
     else:
       print("Sorry, that day doesn't exist.")
