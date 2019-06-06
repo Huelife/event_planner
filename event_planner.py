@@ -117,5 +117,8 @@ with open('msg.txt', 'w') as fout:
   for i in msg:
     fout.write(i)
 
+#opening send email file
+import gmail_smtplib.py
+
 time.sleep(1.5)
 sys.exit(0)
