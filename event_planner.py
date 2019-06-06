@@ -40,11 +40,6 @@ def event_check():
   print(event_date,event_day,event_hr)
   print("")
 
-#writing msg to file, with date info later, to be emailed
-with open('msg.txt', 'w') as fout:
-  for i in msg:
-    fout.write(i)
-
 #creating and checking event_date validity
 while True:
   try:
@@ -108,6 +103,11 @@ while True:
     else:
       print("Sorry, please choose 'Yes' or 'No'.")
       continue
+
+#writing msg to file, with date info later, to be emailed
+with open('msg.txt', 'w') as fout:
+  for i in msg:
+    fout.write(i)
 
 time.sleep(1.5)
 sys.exit(0)
