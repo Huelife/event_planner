@@ -4,9 +4,6 @@ import datetime
 import re
 import sys
 import time
-import smtplib
-
-from email.mime.text import MIMEText
 
 now = datetime.datetime.now()
 time_hr = now.strftime('%I:%M%p')
