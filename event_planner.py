@@ -60,7 +60,7 @@ while True:
         re.search(date_check6,event_date)):
       break
     else:
-      print("Invalid date!")
+      print("Sorry, that date isn't valid.")
       continue
 
 #creating and checking event_day validity
