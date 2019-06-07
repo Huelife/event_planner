@@ -8,4 +8,5 @@ Simple event planner that emails you about events you schedule
 5) Follow the prompts to create 'msg.txt'.
 6) Module will ask for date, day, and time of the event.
 7) Follow the next prompts to send an email through your gmail.
-8) Access for less secure apps must be enabled in your gmail account.
+8) Module will ask for gmail username, password, email From, and email To.
+9) Access for less secure apps must be enabled in your gmail account.
