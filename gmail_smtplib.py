@@ -4,6 +4,7 @@ import smtplib
 
 from email.mime.text import MIMEText
 
+#open msg.txt to be read through MIMEText
 with open("msg.txt","r") as fin:
     msg_rd = fin.read()
     msg = MIMEText(msg_rd)
@@ -20,7 +21,7 @@ def gmail_format():
   msg["From"] = email_from
   msg["To"] = email_to
 
-#sending email through smtp function
+#sending email through gmail/smtp function
 #gmail access for less secure apps must be ENABLED
 def gmail_send():
   gmail = smtplib.SMTP("smtp.gmail.com",587)
