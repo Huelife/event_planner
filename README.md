@@ -1,5 +1,5 @@
 # event_planner
-Simple event planner that emails you about events you schedule
+Simple event planner that emails scheduled events
 ---------------------------------
 1) The program will send an email about future events.
 2) Download all files.
